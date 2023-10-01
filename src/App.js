@@ -179,7 +179,7 @@ function GalleryItem({ galleryItem, currentPage }) {
         controller.abort();
       };
     },
-    [galleryItem, error, isLoading]
+    [galleryItem, currentPage]
   );
 
   return (
