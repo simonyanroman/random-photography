@@ -196,13 +196,13 @@ function GalleryItem({ galleryItem, currentPage }) {
         <p>Loading...</p>
       )}
 
-      <figcaption className='image-caption'>
+      <div className='image-caption'>
         {galleryItem.author ? (
           <p className='caption-title'>{galleryItem.author}</p>
         ) : (
           <p>Loading...</p>
         )}
-      </figcaption>
+      </div>
     </div>
   );
 }

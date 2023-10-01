@@ -115,27 +115,19 @@ main img {
 
 .image-caption {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20%;
   position: absolute;
   left: 0;
-  top: 0;
-  width: 300px;
-  height: 200px;
+  bottom: 0;
   background-color: rgba(32, 32, 32, 0.75);
   color: #ecd078;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.35s ease-in-out;
-}
-
-.image-caption:hover {
-  opacity: 1;
 }
 
 .caption-title {
   font-weight: bold;
-  padding-bottom: 1rem;
   text-transform: uppercase;
 }
 
@@ -155,5 +147,16 @@ footer {
 @media screen and (min-width: 768px) {
   :root {
     font-size: 18px;
+  }
+
+  .image-caption {
+    opacity: 0;
+    transition: opacity 0.35s ease-in-out;
+  }
+
+  .image-thumbnail:hover {
+    .image-caption {
+      opacity: 1;
+    }
   }
 }
